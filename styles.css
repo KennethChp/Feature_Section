@@ -39,25 +39,52 @@ body {
 }
 
 /* Card Column */
-.card-column {
+.card-column   {
     background-color: #212936;
     padding: 2rem;
     border-radius: 1rem;
     width: 17rem;
-    height: 30rem;
+    height: 32rem;
     display: flex;
     flex-direction: column;
+    position: relative; 
 
    
 }
 
-
-
-.emoji {
-    font-size: 2.5rem;
-    text-align: left;
-    margin-bottom: 1rem;
+.first-emoji {
+    font-size: 2.5rem; /* Size of the emoji */
+    max-inline-size: fit-content;
     
+    margin-bottom: 1rem;
+    position: relative; /* Allow child elements to be positioned absolutely relative to this */
+    z-index: 1; /* Keep emoji above the circle */
+    background-color: #FCEED8;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.second-emoji {
+    /* Size of the emoji */
+    max-inline-size: fit-content;
+    
+
+    position: relative; /* Allow child elements to be positioned absolutely relative to this */
+   
+    background-color: #DEE9FC;
+    border-radius: 50%;
+    padding: 0.1rem;
+}
+.third-emoji {
+    
+    max-inline-size: fit-content;
+    
+    margin-bottom: 1rem;
+    position: relative; /* Allow child elements to be positioned absolutely relative to this */
+    z-index: 1; /* Keep emoji above the circle */
+    background-color: #FBE5E6;
+    border-radius: 50%;
+    padding: 0.5rem;
 }
 
 .title-cards {
@@ -78,7 +105,50 @@ body {
 .image {
     width: 100%;
     height: auto;
-    border-radius: 0.5rem;
+    
     margin-top: 1rem;
     object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards horizontally */
+    }
+
+    .card-column {
+        width: 17rem; /* Keep fixed width */
+        height: 32rem; /* Keep fixed height */
+    }
+
+  
+   
+}
+
+/* Tablet Styles (1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cards {
+        flex-direction: row; /* Maintain row direction */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center items */
+    }
+
+    .card-column {
+        width: 17rem; /* Keep fixed width */
+        height: 32rem; /* Keep fixed height */
+        margin-bottom: 2rem; /* Space below each card */
+    }
+
+    .card-column:nth-child(3) {
+        width: 17rem; /* Keep third card the same size */
+        margin-top: -1rem; /* Bring the third card up slightly to center below the first two */
+    }
+}
+
+/* Additional styling to ensure proper spacing and alignment */
+@media (min-width: 1025px) {
+    .card-column {
+        width: 17rem; /* Default width for larger screens */
+        height: 32rem; /* Fixed height for larger screens */
+    }
 }
