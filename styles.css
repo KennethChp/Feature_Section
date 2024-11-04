@@ -18,7 +18,7 @@ body {
     font-size: 2.5rem;
     text-align: center;
     font-weight: 600;
-    margin-top: 1rem;
+    
 }
 
 .title p {
@@ -91,13 +91,13 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     color: #E5E7EB;
-    margin-bottom: 1rem;
+   
 }
 
 .description {
     font-size: 1rem;
     color: #9DA3AE;
-    line-height: 1.5;
+    
     margin-bottom: 1rem;
 }
 
@@ -105,9 +105,9 @@ body {
 .image {
     width: 100%;
     height: auto;
+    border-radius: 1rem;
     
-    margin-top: 1rem;
-    object-fit: cover;
+    
 }
 
 @media (max-width: 640px) {
@@ -118,7 +118,7 @@ body {
 
     .card-column {
         width: 17rem; /* Keep fixed width */
-        height: 32rem; /* Keep fixed height */
+        height: 28rem; /* Keep fixed height */
     }
 
   
@@ -135,7 +135,7 @@ body {
 
     .card-column {
         width: 17rem; /* Keep fixed width */
-        height: 32rem; /* Keep fixed height */
+        height: 28rem; /* Keep fixed height */
         margin-bottom: 2rem; /* Space below each card */
     }
 
@@ -149,6 +149,6 @@ body {
 @media (min-width: 1025px) {
     .card-column {
         width: 17rem; /* Default width for larger screens */
-        height: 32rem; /* Fixed height for larger screens */
+        height: 28rem; /* Fixed height for larger screens */
     }
 }
